@@ -1,1 +1,8 @@
-<p>carrito works!</p>
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.nombre }} </span>
+  <span>{{ item.precio | currency }}</span>
+</div>
+
+<button type="button" routerLink="/direccion">Finalizar Compra</button>

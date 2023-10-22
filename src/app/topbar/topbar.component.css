@@ -14,6 +14,9 @@ p {
   float: left;
   margin-left: 0px;
   margin-right: auto;
+  max-height: 50px;
+  width: auto;
+  height: auto;
 }
 
 .topnav {
@@ -43,10 +46,16 @@ p {
 
   .topnav .account {
     float: right;
+    max-height: 50px;
+    width: auto;
+    height: auto;
   }
 
   .topnav .cart {
     float: right;
+    max-height: 50px;
+    width: auto;
+    height: auto;
   }
 
   .topnav input[type=search] {

@@ -1,0 +1,14 @@
+img {
+  max-width: 400px;
+  width: auto;
+  height: auto;
+}
+
+.producto {
+  display: block;
+  max-width: 30%;
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 20px;
+}

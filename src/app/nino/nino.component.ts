@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nino.component.css']
 })
 export class NinoComponent {
-
+  
 }

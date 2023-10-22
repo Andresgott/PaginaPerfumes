@@ -1,0 +1,17 @@
+<h2>Productos</h2>
+
+<div *ngFor="let producto of infoProductos | async">
+  <div *ngIf="category" class="contenedor">
+    <div *ngIf="producto.categoria==category" class="producto">
+      <h3>
+        <a [title]="producto.nombre + 'details'" [routerLink]="['/producto', producto.identificador]">
+          <img src="assets/{{ category }}/{{ producto.nombre }}.png" />
+        </a>
+      </h3>
+
+      <p *ngIf="producto.descripcion">
+        Descripcion: {{ producto.descripcion }}
+      </p>
+    </div>
+  </div>
+</div>
