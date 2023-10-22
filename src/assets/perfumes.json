@@ -1,0 +1,88 @@
+{
+  "perfumes": [
+    {
+      "identificador": 1,
+      "nombre": "Perfume 1",
+      "precio": 50.99,
+      "descripcion": "Un perfume floral y fresco con notas de rosas y jazmín."
+    },
+    {
+      "identificador": 2,
+      "nombre": "Perfume 2",
+      "precio": 65.50,
+      "descripcion": "Una fragancia oriental con toques de ámbar y especias."
+    },
+    {
+      "identificador": 3,
+      "nombre": "Perfume 3",
+      "precio": 42.75,
+      "descripcion": "Un aroma cítrico y refrescante con notas de limón y bergamota."
+    },
+    {
+      "identificador": 4,
+      "nombre": "Perfume 4",
+      "precio": 75.99,
+      "descripcion": "Una fragancia amaderada con toques de sándalo y cedro."
+    },
+    {
+      "identificador": 5,
+      "nombre": "Perfume 5",
+      "precio": 58.25,
+      "descripcion": "Un perfume floral con notas de lirios y gardenias."
+    },
+    {
+      "identificador": 6,
+      "nombre": "Perfume 6",
+      "precio": 48.99,
+      "descripcion": "Una fragancia dulce con toques de vainilla y caramelo."
+    },
+    {
+      "identificador": 7,
+      "nombre": "Perfume 7",
+      "precio": 55.00,
+      "descripcion": "Un aroma fresco y limpio con notas de lavanda y menta."
+    },
+    {
+      "identificador": 8,
+      "nombre": "Perfume 8",
+      "precio": 62.75,
+      "descripcion": "Una fragancia picante con toques de pimienta y canela."
+    },
+    {
+      "identificador": 9,
+      "nombre": "Perfume 9",
+      "precio": 47.50,
+      "descripcion": "Un perfume frutal con notas de manzana y pera."
+    },
+    {
+      "identificador": 10,
+      "nombre": "Perfume 10",
+      "precio": 53.99,
+      "descripcion": "Una fragancia suave y elegante con toques de almizcle y ámbar."
+    },
+    {
+      "identificador": 11,
+      "nombre": "Perfume 11",
+      "precio": 68.25,
+      "descripcion": "Un aroma exótico con notas de sándalo y pachulí."
+    },
+    {
+      "identificador": 12,
+      "nombre": "Perfume 12",
+      "precio": 49.50,
+      "descripcion": "Un perfume ligero y fresco con notas de cítricos y flores blancas."
+    },
+    {
+      "identificador": 13,
+      "nombre": "Perfume 13",
+      "precio": 54.99,
+      "descripcion": "Una fragancia intensa con toques de cuero y tabaco."
+    },
+    {
+      "identificador": 14,
+      "nombre": "Perfume 14",
+      "precio": 62.00,
+      "descripcion": "Un aroma misterioso con notas de incienso y mirra."
+    }
+  ]
+}

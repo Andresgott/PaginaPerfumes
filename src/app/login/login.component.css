@@ -1,0 +1,33 @@
+p {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+label {
+    text-align: center;
+}
+
+div {
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.emailBox {
+    max-width: 500px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.pwdBox {
+    max-width: 500px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
