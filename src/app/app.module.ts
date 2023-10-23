@@ -11,11 +11,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HombreComponent } from './hombre/hombre.component';
 import { MujerComponent } from './mujer/mujer.component';
 import { NinoComponent } from './nino/nino.component';
-import {ListaProductosComponent} from  './lista-productos/lista-productos.component';
+import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
 import { DireccionComponent } from './direccion/direccion.component';
+import { LoginComponent } from './login/login.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { DireccionComponent } from './direccion/direccion.component';
     HombreComponent,
     MujerComponent,
     NinoComponent,
-    ListaProductosComponent,
     DetallesProductoComponent,
     DireccionComponent,
+    LoginComponent,
+    ListaProductosComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import { DireccionComponent } from './direccion/direccion.component';
       { path: 'nino', component: NinoComponent },
       { path: 'producto/:idProducto', component: DetallesProductoComponent },
       { path: 'direccion', component: DireccionComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'createAccount', component: CreateAccountComponent },
     ])
   ],
   providers: [],
