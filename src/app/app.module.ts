@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgxPayPalModule } from 'ngx-paypal';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -18,6 +19,7 @@ import { DetallesProductoComponent } from './detalles-producto/detalles-producto
 import { DireccionComponent } from './direccion/direccion.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { PagoComponent } from './pago/pago.component'
 
 @NgModule({
   declarations: [
@@ -34,11 +36,13 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     DireccionComponent,
     LoginComponent,
     ListaProductosComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxPayPalModule,
     RouterModule.forRoot([
       { path: '', component: InicioComponent },
       { path: 'carrito', component: CarritoComponent },
@@ -49,6 +53,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
       { path: 'direccion', component: DireccionComponent },
       { path: 'login', component: LoginComponent },
       { path: 'createAccount', component: CreateAccountComponent },
+      { path: 'pago', component: PagoComponent },
+
     ])
   ],
   providers: [],
