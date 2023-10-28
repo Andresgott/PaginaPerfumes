@@ -26,7 +26,6 @@ import { PagoComponent } from './pago/pago.component'
     AppComponent,
     TopbarComponent,
     BannerComponent,
-    FrasesComponent,
     CarritoComponent,
     InicioComponent,
     HombreComponent,
@@ -37,7 +36,8 @@ import { PagoComponent } from './pago/pago.component'
     LoginComponent,
     ListaProductosComponent,
     CreateAccountComponent,
-    PagoComponent
+    PagoComponent,
+    FrasesComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +54,9 @@ import { PagoComponent } from './pago/pago.component'
       { path: 'login', component: LoginComponent },
       { path: 'createAccount', component: CreateAccountComponent },
       { path: 'pago', component: PagoComponent },
+      { path: 'frases', component: FrasesComponent },
+     
+
 
     ])
   ],

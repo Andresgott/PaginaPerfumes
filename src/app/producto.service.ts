@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { MiProducto, productos } from './producto';
+import { productos } from './producto';
+import { MiProducto } from './producto';
 
 @Injectable({
     providedIn: 'root'
@@ -12,13 +13,7 @@ export class ProductoService {
     obtenerDatosDesdeJSON() {
         return this.http.get<{ identificador: number, nombre: string, categoria: string, precio: number, descripcion: string }[]>('assets/productos.json')
             .subscribe(product => {
-                MiProducto = {
-                    identificador: product.values(),
-                    nombre: product.values(),
-                    categoria: product.values(),
-                    precio: product.values(),
-                    descripcion: product.values(),
-                };
+                productos.push(new MiProducto(product));
             });
     }
 }
