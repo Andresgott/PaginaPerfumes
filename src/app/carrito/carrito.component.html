@@ -1,8 +1,8 @@
-<h3>Cart</h3>
+<h3 class="titulo-carrito">Carrito</h3>
 
 <div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.nombre }} </span>
-  <span>{{ item.precio | currency }}</span>
+    <span class="estetica">{{ item.nombre }} </span>
+    <span class="estetica">{{ item.precio | currency }}</span>
 </div>
 
-<button type="button" routerLink="/direccion">Finalizar Compra</button>
+<button type="button" routerLink="/direccion" class="boton-estilizado">Finalizar Compra</button>
