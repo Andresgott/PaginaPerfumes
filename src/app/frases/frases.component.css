@@ -1,5 +1,11 @@
 p {
     text-align: center;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lobster', cursive;
 }
 
 p:after {
