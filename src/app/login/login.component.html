@@ -1,14 +1,26 @@
-<p>Inicio Sesión</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de Sesión</title>
+</head>
+<body>
 
-<div>
-  <input inputmode="email" class="emailBox" placeholder="Email" />
-</div>
-<div>
-  <input type="password" class="pwdBox" placeholder="Password" />
-</div>
-<div>
-  <a routerLink="/createAccount">Crear Cuenta</a>
-</div>
-<div>
-  <button class="boton-estilizado">Ingresar</button>
-</div>
+    <h2>Inicio de Sesión</h2>
+
+    <form action="http://localhost/fetch-account.php" method="post">
+        <div>
+            <input inputmode="email" class="emailBox" placeholder="Email" name="email" id="email" required />
+        </div>
+        <div>
+            <input type="password" class="pwdBox" placeholder="Password" name="password" id="password" required/>
+        </div>
+        <div>
+            <a href="/createAccount">Crear Cuenta</a>
+        </div>
+        <div>
+            <button type="submit">Ingresar</button>
+        </div>
+    </form>
+
+</body>
+</html>

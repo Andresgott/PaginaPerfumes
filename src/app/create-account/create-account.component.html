@@ -1,16 +1,29 @@
-<p>Crear Cuenta</p>
-<div>
-  <input placeholder="Nombre" class="half" /><input placeholder="Apellido" class="half" />
-</div>
-<div>
-  <input type="email" placeholder="Email" class="half" /><input type="number" placeholder="Telefono" class="half" />
-</div>
-<div>
-  <input type="password" placeholder="Password" class="full" />
-</div>
-<div>
-  <input type="password" placeholder="Confirm Password" class="full" />
-</div>
-<div>
-  <button class="boton-estilizado">Crear</button>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Cuenta</title>
+</head>
+<body>
+
+    <h2>Crear Cuenta</h2>
+     
+    <form action="http://localhost/create-account.php" method="post">
+        <div>
+            <input placeholder="Nombre" class="half" name="nombre" id="nombre" required /><input placeholder="Apellido" class="half" name="apellido" id="apellido" required />
+        </div>
+        <div>
+            <input type="email" placeholder="Email" class="half" name="email" id="email" required /><input type="number" placeholder="Telefono" class="half" name="telefono" id="telefono" required/>
+        </div>
+        <div>
+            <input type="password" placeholder="Password" class="full" name="password" id="password" required />
+        </div>
+        <div>
+            <input type="password" placeholder="Confirm Password" class="full" name="confirm_password" id="confirm_password" required/>
+        </div>
+        <div>
+            <button type="submit">Crear</button>
+        </div>
+    </form>
+
+</body>
+</html>
