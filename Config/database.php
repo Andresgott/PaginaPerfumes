@@ -3,9 +3,9 @@
 class Database
 {
     private $hostname="localhost";
-    private $database="perfumeria";
-    private $username="root";
-    private $password="Erickita10";
+    private $database="datosperfumeria";
+    private $username="pma";
+    private $password="kbbl654321";
     private $charset="utf8";
     
     function conectar()

@@ -1,16 +1,18 @@
 <p>Envio</p>
-<div>
-  <input placeholder="Nombre" class="half" /><input placeholder="Apellido" class="half" />
-</div>
-<div>
-  <input type="email" placeholder="Dirección" class="full" />
-</div>
-<div>
-  <input type="number" placeholder="Telefono" class="half" />
-</div>
-<div>
-  <input type="password" placeholder="Email" class="full" />
-</div>
-<div>
-  <button type="button" routerLink="/pago" class="boton-estilizado">Guardar</button>
-</div>
+<form [formGroup]="formularioDireccion" (ngSubmit)="onSubmit()">
+  <div>
+    <input placeholder="Nombre" class="half" formControlName="name" /><input placeholder="Apellido" class="half" formControlName="lastname" />
+  </div>
+  <div>
+    <input type="text" placeholder="Dirección" class="full"  formControlName="address" />
+  </div>
+  <div>
+    <input type="number" placeholder="Telefono" class="half" formControlName="cellphone" />
+  </div>
+  <div>
+    <input type="email" placeholder="Email" class="full" formControlName="email" />
+  </div>
+  <div>
+    <button type="submit" class="boton-estilizado">Guardar</button>
+  </div>
+</form>

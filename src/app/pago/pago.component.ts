@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IPayPalConfig, ICreateOrderRequest, IOrderDetails} from 'ngx-paypal';
+import { IPayPalConfig, ICreateOrderRequest, IOrderDetails } from 'ngx-paypal';
+import { HttpClient } from '@angular/common/http';
 
+import { CarritoService } from '../carrito.service';
 
 @Component({
     selector: 'app-pago',
@@ -13,12 +15,21 @@ export class PagoComponent implements OnInit {
 
     public payPalConfig?: IPayPalConfig;
     private showSuccess: Boolean = false;
+    private price: number = 0;
+
+    constructor(
+        private http: HttpClient,
+        private carrito: CarritoService
+    ) { }
 
     ngOnInit(): void {
-        this.initConfig();
+        const tmp_price = this.carrito.getTotalPrice();
+        this.price = Math.round((tmp_price + Number.EPSILON) * 100) / 100;
+        console.log(this.price);
+        this.initConfig(this.price.toString());
     }
 
-    private initConfig(): void {
+    private initConfig(precio: string): void {
         this.payPalConfig = {
             currency: 'USD',
             clientId: 'sb',
@@ -28,11 +39,11 @@ export class PagoComponent implements OnInit {
                     {
                         amount: {
                             currency_code: 'USD',
-                            value: '102',
+                            value: precio,
                             breakdown: {
                                 item_total: {
                                     currency_code: 'USD',
-                                    value: '102'
+                                    value: precio
                                 }
                             }
                         },
@@ -43,7 +54,7 @@ export class PagoComponent implements OnInit {
                                 category: 'DIGITAL_GOODS',
                                 unit_amount: {
                                     currency_code: 'USD',
-                                    value: '102',
+                                    value: precio,
                                 },
                             }
                         ]
@@ -66,6 +77,7 @@ export class PagoComponent implements OnInit {
             onClientAuthorization: (data) => {
                 console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
                 this.showSuccess = true;
+                this.sendShowSuccessToServer(this.price);
             },
             onCancel: (data, actions) => {
                 console.log('OnCancel', data, actions);
@@ -76,7 +88,20 @@ export class PagoComponent implements OnInit {
             onClick: (data, actions) => {
                 console.log('onClick', data, actions);
             },
+
         };
     }
-}
 
+    private sendShowSuccessToServer(price: number) {
+        return this.http.post('http://localhost/Proyectos/factura.php/', { totalprice: price },{responseType: 'text'})
+            .subscribe(
+                (response: any) => {
+                    console.log('Enviado con exito al servidor PHP', response);
+                },
+                (error: any) => {
+                    console.error('Error al enviar al servidor PHP', error);
+                }
+            );
+    }
+
+}

@@ -1,6 +1,6 @@
 <?php
 
-require 'Config/database.php';
+require 'C:/Users/MSI MODERN/PaginaPerfumes/Config/database.php';
 require 'src/clienteFunciones.php';
 
 $db=new Database();

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -42,6 +43,7 @@ import { PagoComponent } from './pago/pago.component'
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     NgxPayPalModule,
     RouterModule.forRoot([
       { path: '', component: InicioComponent },

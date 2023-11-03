@@ -1,8 +1,15 @@
 <h3 class="titulo-carrito">Carrito</h3>
 
-<div class="cart-item" *ngFor="let item of items">
-    <span class="estetica">{{ item.nombre }} </span>
-    <span class="estetica">{{ item.precio | currency }}</span>
+<div class="cart-item" *ngFor="let item of items; let i = index">
+    <div class="cart-item-details">
+        <div class="product-name">
+            <span class="estetica">{{ item.nombre }}</span>
+        </div>
+        <img class="cart-item-image" src="assets/{{ item.categoria }}/{{ item.nombre }}.png" />
+        <div class="product-price">
+            <span class="estetica">{{ item.precio | currency }}</span>
+        </div>
+    </div>
 </div>
 
-<button type="button" routerLink="/direccion" class="boton-estilizado">Finalizar Compra</button>
+<button type="button" (click)="goToDirection()" class="boton-estilizado">Finalizar Compra</button>
